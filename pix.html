@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Pagamento Pix - Swing Love</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 25px;
+}
+.box {
+  border: 2px solid #ff0055;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 400px;
+  margin: auto;
+}
+h1 {
+  color: #ff0055;
+}
+.pix {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  word-break: break-all;
+  margin: 15px 0;
+  font-size: 16px;
+}
+button {
+  background: #ff0055;
+  border: none;
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+small {
+  color: #aaa;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h1>🔥 Swing Love VIP</h1>
+  <p><strong>Valor:</strong> R$ 29,90</p>
+
+  <p>Faça o pagamento via Pix usando a chave abaixo:</p>
+
+  <div class="pix" id="pixKey">
+    musuris@jim.com
+  </div>
+
+  <button onclick="copiarPix()">Copiar chave Pix</button>
+
+  <p><small>Após o pagamento, envie o comprovante para a administração.</small></p>
+</div>
+
+<script>
+function copiarPix() {
+  const texto = document.getElementById("pixKey").innerText;
+  navigator.clipboard.writeText(texto);
+  alert("Chave Pix copiada!");
+}
+</script>
+
+</body>
+    </html>
